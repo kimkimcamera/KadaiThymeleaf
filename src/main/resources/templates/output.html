@@ -2,13 +2,13 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
-    <title>Kadai Lesson15</title>
+    <title th:text="#{page.title}"></title>
 </head>
 <body>
-    <h1>Thymeleaf課題</h1>
-        <h2>出力画面</h2>
+    <h1 th:text="#{kadai}"></h1>
+        <h2 th:text="#{output.word}"></h2>
         <p th:text="'入力された値は「' + ${val} + '」です。'"></p>
-        <p><a th:href="@{'/input?previous=' + ${val}}">入力画面へ戻る。</a></p>
+        <p><a th:href="@{'/input?previous=' + ${val}}" th:text="#{page.back}"></a></p>
         <!--<p><a th:href="@{/input(previous=${val})}">入力画面へ戻る。</a></p>-->
 </body>
 </html>
